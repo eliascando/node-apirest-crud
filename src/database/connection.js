@@ -1,10 +1,11 @@
 import sql from 'mssql'
+import config from '../config';
 
 const dbSettings = {
-    user : process.env.USER,
-    password : process.env.PASS,
-    server : process.env.SERVER,
-    database : process.env.DATABASE,
+    user : config.dbUser,
+    password : config.dbPass,
+    server : config.dbServer,
+    database : config.dbDatabase,
     options: {
         encrypt: true,
         trustServerCertificate: true,
